@@ -30,5 +30,5 @@ clf.fit(training_inputs, training_classes)
 clf = RandomForestClassifier(n_estimators=10, random_state=1)
 cv_scores = cross_val_score(clf, all_features, all_classes, cv=10)
 
-print(cv_scores.mean())
+print(cv_scores.mean()*100)
 
