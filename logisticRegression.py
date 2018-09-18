@@ -18,4 +18,4 @@ feature_names = ['age', 'shape', 'margin', 'density']
 
 clf = LogisticRegression()
 cv_scores = cross_val_score(clf, all_features, all_classes, cv=10)
-print(cv_scores.mean())
+print(cv_scores.mean()*100)
