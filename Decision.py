@@ -35,4 +35,4 @@ tree.export_graphviz(clf, out_file=dot_data,
 graph = graph_from_dot_data(dot_data.getvalue())
 Image(graph.create_png()) 
 graph.write_png('fig.png')
-print(clf.score(x_test, y_test))
+print(clf.score(x_test, y_test)*100)
