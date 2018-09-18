@@ -15,6 +15,7 @@ all_classes = masses_data['severity'].values
 feature_names = ['age', 'shape', 'margin', 'density']
 numpy.random.seed(1234)
 
+
 (x_train,x_test,y_train,y_test) = train_test_split(all_features, all_classes, test_size=0.25, train_size=0.75, random_state=1)
 
 
@@ -23,4 +24,4 @@ svc = svm.SVC(kernel='linear', C=C)
 
 cv_scores = cross_val_score(svc, all_features, all_classes, cv=10)
 
-print(cv_scores.mean())
+print(cv_scores.mean()*100)
