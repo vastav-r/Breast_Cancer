@@ -17,11 +17,10 @@ all_classes = masses_data['severity'].values
 feature_names = ['age', 'shape', 'margin', 'density']
 
 
-
 scaler = preprocessing.MinMaxScaler()
 all_features_minmax = scaler.fit_transform(all_features)
 
 clf = MultinomialNB()
 cv_scores = cross_val_score(clf, all_features_minmax, all_classes, cv=10)
 
-print(cv_scores.mean())
+print(cv_scores.mean()*100)
