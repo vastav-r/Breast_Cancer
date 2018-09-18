@@ -21,4 +21,4 @@ numpy.random.seed(1234)
 clf = neighbors.KNeighborsClassifier(n_neighbors=10)
 cv_scores = cross_val_score(clf, all_features, all_classes, cv=10)
 
-print(cv_scores.mean())
+print(cv_scores.mean()*100)
